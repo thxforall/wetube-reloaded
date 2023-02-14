@@ -4,8 +4,8 @@ import { edit, logout, see, deleteUser } from "../controllers/userController";
 const userRouter = express.Router();
 
 userRouter.get("/logout", logout);
-userRouter.get("/:id", see);
-userRouter.get("/:id/edit", edit);
-userRouter.get("/:id/delete", deleteUser);
+userRouter.get("/:id(\\d+)", see);
+userRouter.get("/:id(\\d+)/edit", edit);
+userRouter.get("/:id/(\\d+)delete", deleteUser);
 
 export default userRouter;
