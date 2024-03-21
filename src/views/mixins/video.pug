@@ -1,0 +1,9 @@
+mixin video(content)
+     div
+                h4
+                   a(href=`/videos/${content.id}`)=content.title
+                ul 
+                    li #{content.rating} / 5
+                    li #{content.comments} comments.
+                    li Posted #{content.createAt}
+                    li #{content.views} views.
